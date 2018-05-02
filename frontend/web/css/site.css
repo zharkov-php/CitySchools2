@@ -1,0 +1,276 @@
+html,
+body {
+    height: 100%;
+}
+
+.wrap {
+    min-height: 100%;
+    height: auto;
+    margin: 0 auto -60px;
+    padding: 0 0 60px;
+}
+
+.wrap > .container {
+    padding: 70px 15px 20px;
+}
+
+.footer {
+    height: 60px;
+    background-color: rgba(51, 122, 183, 0.66);
+    border-top: 1px solid #ddd;
+    padding-top: 20px;
+}
+
+.jumbotron {
+    text-align: center;
+    background-color: transparent;
+}
+
+.jumbotron .btn {
+    font-size: 21px;
+    padding: 14px 24px;
+}
+
+.not-set {
+    color: #c55;
+    font-style: italic;
+}
+
+/* add sorting icons to gridview sort links */
+a.asc:after, a.desc:after {
+    position: relative;
+    top: 1px;
+    display: inline-block;
+    font-family: 'Glyphicons Halflings';
+    font-style: normal;
+    font-weight: normal;
+    line-height: 1;
+    padding-left: 5px;
+}
+
+a.asc:after {
+    content: "\e151";
+}
+
+a.desc:after {
+    content: "\e152";
+}
+
+.sort-numerical a.asc:after {
+    content: "\e153";
+}
+
+.sort-numerical a.desc:after {
+    content: "\e154";
+}
+
+.sort-ordinal a.asc:after {
+    content: "\e155";
+}
+
+.sort-ordinal a.desc:after {
+    content: "\e156";
+}
+
+.grid-view td {
+    white-space: nowrap;
+}
+
+.grid-view .filters input,
+.grid-view .filters select {
+    min-width: 50px;
+}
+
+.hint-block {
+    display: block;
+    margin-top: 5px;
+    color: #999;
+}
+
+.error-summary {
+    color: #a94442;
+    background: #fdf7f7;
+    border-left: 3px solid #eed3d7;
+    padding: 10px 20px;
+    margin: 0 0 15px 0;
+}
+
+/* align the logout "link" (button in form) of the navbar */
+.nav li > form > button.logout {
+    padding: 15px;
+    border: none;
+}
+
+@media(max-width:767px) {
+    .nav li > form > button.logout {
+        display:block;
+        text-align: left;
+        width: 100%;
+        padding: 10px 15px;
+    }
+}
+
+.nav > li > form > button.logout:focus,
+.nav > li > form > button.logout:hover {
+    text-decoration: none;
+}
+
+.nav > li > form > button.logout:focus {
+    outline: none;
+}
+
+
+
+
+
+
+
+.filterDiv {
+    float: left;
+    background-color: #2196F3;
+    color: #ffffff;
+    width: 100px;
+    line-height: 100px;
+    text-align: center;
+    margin: 2px;
+    display: none; /* Hidden by default */
+}
+.filterDiv5 {
+    float: left;
+    background-color: #fdfcff;
+    color: #010100;
+    width: 250px;
+    line-height: 30px;
+    text-align: center;
+    margin: 5px;
+    display: none; /* Hidden by default */
+}
+
+
+/* The "show" class is added to the filtered elements */
+.show {
+    display: block;
+}
+
+
+
+/* Add a light grey background on mouse-over */
+.btn:hover {
+    background-color: #ddd;
+}
+
+/* Add a dark background to the active button */
+.btn.active {
+    background-color: #666;
+    color: white;
+}
+
+
+
+.chip {
+    display: inline-block;
+    padding: 0 75px;
+    height: 200px;
+    font-size: 32px;
+    line-height: 50px;
+    border-radius: 50px;
+    background-color: #f1f1f1;
+}
+
+.chip img {
+    float: left;
+    margin: 0 10px 0 -25px;
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+
+}
+
+
+.icon-bar1 {
+    position: fixed;
+    top: 67%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+/* Style the icon bar links */
+.icon-bar1 a {
+    display: block;
+    text-align: center;
+    padding: 16px;
+    transition: all 0.3s ease;
+    color: white;
+    font-size: 15px;
+}
+
+/* Style the social media icons with color, if you want */
+.icon-bar1 a:hover {
+    background-color: #222222;
+}
+
+.facebook1 {
+    background: rgba(59, 89, 152, 0.31);
+    color: white;
+}
+
+.twitter1 {
+    background: rgba(85, 172, 238, 0.32);
+    color: white;
+}
+
+.google1 {
+    background: rgba(221, 75, 57, 0.31);
+    color: white;
+}
+
+.linkedin1 {
+    background: rgba(0, 123, 181, 0.32);
+    color: white;
+}
+
+.youtube1 {
+    background: rgba(187, 0, 0, 0.32);
+    color: white;
+}
+
+
+.coupon1 {
+    border: 5px dotted #bb0607; /* Dotted border */
+    width: 100%;
+    border-radius: 15px; /* Rounded border */
+    margin: 0 auto; /* Center the coupon */
+    max-width: 600px;
+}
+.coupon2 {
+    border: 5px dotted #fff80f; /* Dotted border */
+    width: 100%;
+    border-radius: 15px; /* Rounded border */
+    margin: 0 auto; /* Center the coupon */
+    max-width: 600px;
+}
+.coupon3 {
+    border: 5px dotted #18bb09; /* Dotted border */
+    width: 100%;
+    border-radius: 15px; /* Rounded border */
+    margin: 0 auto; /* Center the coupon */
+    max-width: 600px;
+}
+.coupon4 {
+    border: 5px dotted #0820bb; /* Dotted border */
+    width: 100%;
+    border-radius: 15px; /* Rounded border */
+    margin: 0 auto; /* Center the coupon */
+    max-width: 600px;
+}
+
+.couponGray {
+    border: 5px dotted rgba(14, 149, 198, 0.38); /* Dotted border */
+    width: 100%;
+    border-radius: 15px; /* Rounded border */
+    margin: 0 auto; /* Center the coupon */
+    max-width: 600px;
+}
+
+
