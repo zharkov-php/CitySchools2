@@ -7,30 +7,38 @@
 use yii\helpers\Html;
 use yii\bootstrap\ActiveForm;
 
-$this->title = 'Login';
-$this->params['breadcrumbs'][] = $this->title;
+$this->title = 'Вход';
 ?>
+<div class="row">
+    <div class="col-lg-6">
+        <img src="/image/600_100.png" class="img-thumbnail" alt="Cinque Terre"></a>
+    </div>
+    <div class="col-lg-6">
+        <img src="/image/600_100.png" class="img-thumbnail" alt="Cinque Terre"></a>
+    </div>
+
+</div><br>
 <div class="site-login">
     <h1><?= Html::encode($this->title) ?></h1>
 
-    <p>Please fill out the following fields to login:</p>
+    <p>Пожалуйста, заполните поля:</p>
 
     <div class="row">
         <div class="col-lg-5">
             <?php $form = ActiveForm::begin(['id' => 'login-form']); ?>
 
-                <?= $form->field($model, 'email')->textInput(['autofocus' => true]) ?>
+                <?= $form->field($model, 'email')->textInput(['autofocus' => true])->label('Почта') ?>
 
-                <?= $form->field($model, 'password')->passwordInput() ?>
+                <?= $form->field($model, 'password')->passwordInput()->label('Пароль') ?>
 
-                <?= $form->field($model, 'rememberMe')->checkbox() ?>
+                <?= $form->field($model, 'rememberMe')->checkbox()->label('Запомнить меня')?>
 
                 <div style="color:#999;margin:1em 0">
-                    If you forgot your password you can <?= Html::a('reset it', ['/user/default/request-password-reset']) ?>.
+                    Вы можете поменять пароль <?= Html::a('сбросить', ['/user/default/request-password-reset']) ?>.
                 </div>
 
                 <div class="form-group">
-                    <?= Html::submitButton('Login', ['class' => 'btn btn-primary', 'name' => 'login-button']) ?>
+                    <?= Html::submitButton('Вход', ['class' => 'btn btn-primary', 'name' => 'login-button']) ?>
                 </div>
 
             <?php ActiveForm::end(); ?>

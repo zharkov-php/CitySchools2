@@ -19,7 +19,7 @@ class DefaultController extends Controller
     {
         $allPosts = Post::find()->orderBy('id DESC');
         $countQuery = clone $allPosts;
-        $pages = new Pagination(['totalCount' => $countQuery->count(), 'pageSize' => 3]);
+        $pages = new Pagination(['totalCount' => $countQuery->count(), 'pageSize' => 10]);
         $pages->pageSizeParam = false;
         $allPosts = $countQuery->offset($pages->offset)
             ->limit($pages->limit)
