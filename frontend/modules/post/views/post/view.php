@@ -12,22 +12,15 @@ use yii\helpers\Html;
 use yii\web\JqueryAsset;
 ?>
 <div class="post-default-index">
-
     <div class="row">
-
-        <div class="col-md-12">
-
-                <?php echo $post->title; ?>
-
+        <div class="col-lg-12">
+            <center><h3><b><?php echo Html::encode($post->title); ?></b></h3></center>
         </div>
+        </div><hr>
 
-
-
-        <div class="col-md-12">
-            <?php echo Html::encode($post->description); ?>
+        <div class="col-lg-12">
+                <?php echo $post->text; ?>
         </div>
-        <hr>
-
 
 
     </div>
