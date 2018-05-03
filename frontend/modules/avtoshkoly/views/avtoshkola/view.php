@@ -91,60 +91,7 @@ $this->title = $kiev_avtoshkola->title_seo;
         <hr>
 
         <h3>Фотогалерея:</h3>
-        <div id="myCarousel" class="carousel slide" data-ride="carousel">
-            <!-- Indicators -->
-            <ol class="carousel-indicators">
-                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-                <li data-target="#myCarousel" data-slide-to="1"></li>
-                <li data-target="#myCarousel" data-slide-to="2"></li>
-            </ol>
 
-            <!-- Slideshow container -->
-            <div class="slideshow-container">
-
-                <!-- Full-width images with number and caption text -->
-                <div class="mySlides fade">
-                    <div class="numbertext">1 / 3</div>
-                    <img src="/images/Avtomag-avtoshkola/slide1.jpg" style="width:100%">
-                    <div class="text"><?php echo $kiev_avtoshkola->name ?></div>
-                </div>
-
-                <div class="mySlides fade">
-                    <div class="numbertext">2 / 3</div>
-                    <img src="/images/Avtomag-avtoshkola/slide2.jpg" style="width:100%">
-                    <div class="text"><?php echo $kiev_avtoshkola->name ?></div>
-                </div>
-
-                <div class="mySlides fade">
-                    <div class="numbertext">3 / 3</div>
-                    <img src="/images/Avtomag-avtoshkola/card-01.jpg" style="width:100%">
-                    <div class="text"><?php echo $kiev_avtoshkola->name ?></div>
-                </div>
-
-                <!-- Next and previous buttons -->
-                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-                <a class="next" onclick="plusSlides(1)">&#10095;</a>
-            </div>
-            <br>
-
-            <!-- The dots/circles -->
-            <div style="text-align:center">
-                <span class="dot" onclick="currentSlide(1)"></span>
-                <span class="dot" onclick="currentSlide(2)"></span>
-                <span class="dot" onclick="currentSlide(3)"></span>
-            </div>
-
-
-            <!-- Left and right controls -->
-            <a class="left carousel-control" href="#myCarousel" data-slide="prev">
-                <span class="glyphicon glyphicon-chevron-left"></span>
-                <span class="sr-only">Previous</span>
-            </a>
-            <a class="right carousel-control" href="#myCarousel" data-slide="next">
-                <span class="glyphicon glyphicon-chevron-right"></span>
-                <span class="sr-only">Next</span>
-            </a>
-        </div>
         <hr>
         <hr>
 
