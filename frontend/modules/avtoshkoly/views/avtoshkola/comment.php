@@ -35,7 +35,7 @@ if(!empty($comments)):?>
 <?php if(!Yii::$app->user->isGuest):?>
 
     <div class="leave-comment"><!--leave comment-->
-        <h4>Оставьте комментарий автошколе <?php echo '" ' . Html::encode($kiev_avtoshkola->name) . ' "'; ?> : </h4>
+        <h4>Оставьте отзыв автошколе <?php echo '" ' . Html::encode($kiev_avtoshkola->name) . ' "'; ?> : </h4>
         <?php if(Yii::$app->session->getFlash('comment')):?>
             <div class="alert alert-success" role="alert">
                 <?= Yii::$app->session->getFlash('comment'); ?>
@@ -50,7 +50,7 @@ if(!empty($comments)):?>
         <div class="form-group">
             <div class="col-md-12">
 
-                <?= $form->field($commentForm, 'comment')->textarea(['class'=>'form-control','placeholder'=>'Напишите комментарий...'])->label(false)?>
+                <?= $form->field($commentForm, 'comment')->textarea(['class'=>'form-control','placeholder'=>'Напишите отзыв...'])->label(false)?>
             </div>
         </div>
         <button type="submit" class="btn send-btn">Отправить</button>
@@ -60,7 +60,7 @@ if(!empty($comments)):?>
     </div><!--end leave comment-->
 <?php else :?>
     <?php  echo  '<h1>' . '<div class="alert alert-danger">
-  <strong> Здравствуйте, если Вы хотите оставить комментарий - зарегистрируйтесь пожалуйста!!!</strong>
+  <strong> Здравствуйте, если Вы хотите оставить отзыв - зарегистрируйтесь пожалуйста!!!</strong>
 </div>'  . '</h1>' ;?>
 
 <?php endif;?>

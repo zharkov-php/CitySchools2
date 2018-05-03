@@ -11,6 +11,10 @@ $this->title = $model->name;
 $this->params['breadcrumbs'][] = ['label' => 'Instructors', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
+
+
+    <button onclick="topFunction()" id="myBtnComment" title="Оставить отзыв">Оставить отзыв</button>
+
 <div class="instructor-view">
 
     <h1><?= Html::encode($this->title) ?></h1>

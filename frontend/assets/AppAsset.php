@@ -16,6 +16,10 @@ class AppAsset extends AssetBundle
     ];
     public $js = [
         'js/sort_district_Kiev.js',
+        'js/toFooterComment.js',
+        'js/slideInAvtoshkola.js',
+
+
     ];
     public $depends = [
         'yii\web\YiiAsset',

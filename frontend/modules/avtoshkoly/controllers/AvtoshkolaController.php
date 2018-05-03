@@ -29,6 +29,7 @@ class AvtoshkolaController extends Controller
 
     public function actionView($id)
     {
+        $avtoshkoly = Avtoshkoly::find()->limit(3)->orderBy('rand()')->all();
 
         $article = Avtoshkoly::findOne($id);
         $comments = $article->comments;
@@ -47,7 +48,9 @@ class AvtoshkolaController extends Controller
             'model' => $model,
             'article'=>$article,
             'comments'=>$comments,
-            'commentForm' => $commentForm
+            'commentForm' => $commentForm,
+            'avtoshkoly' => $avtoshkoly,
+
         ]);
 
     }

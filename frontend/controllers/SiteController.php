@@ -16,6 +16,9 @@ use frontend\models\User;
 
 use app\components\AuthHandler;
 
+use frontend\modules\user\models\PasswordResetRequestForm;
+use frontend\modules\user\models\ResetPasswordForm;
+use frontend\modules\user\models\SignupForm;
 use Yii;
 use yii\base\InvalidParamException;
 use yii\web\BadRequestHttpException;
@@ -251,4 +254,7 @@ class SiteController extends Controller
             'model' => $model,
         ]);
     }
+
+
+
 }
