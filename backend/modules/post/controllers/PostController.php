@@ -5,6 +5,7 @@ namespace backend\modules\post\controllers;
 use Yii;
 use frontend\models\Post;
 use frontend\modules\post\models\PostSearch;
+use yii\filters\AccessControl;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
@@ -26,6 +27,21 @@ class PostController extends Controller
                     'delete' => ['POST'],
                 ],
             ],
+            'access' => [
+                'class' => AccessControl::className(),
+                'rules' => [
+                    [
+                        'allow' => true,
+                        'actions' => ['index', 'view'],
+                        'roles' => ['admin', 'moderator'],
+                    ],
+                    [
+                        'allow' => true,
+                        'actions' => ['delete', 'update', 'create'],
+                        'roles' => ['admin'],
+                    ],
+                ],
+            ],
         ];
     }
 
@@ -35,6 +51,7 @@ class PostController extends Controller
      */
     public function actionIndex()
     {
+
         $searchModel = new PostSearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
 
@@ -52,6 +69,8 @@ class PostController extends Controller
      */
     public function actionView($id)
     {
+
+
         return $this->render('view', [
             'model' => $this->findModel($id),
         ]);
@@ -64,6 +83,7 @@ class PostController extends Controller
      */
     public function actionCreate()
     {
+
         $model = new Post();
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
@@ -84,6 +104,7 @@ class PostController extends Controller
      */
     public function actionUpdate($id)
     {
+
         $model = $this->findModel($id);
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
@@ -104,6 +125,7 @@ class PostController extends Controller
      */
     public function actionDelete($id)
     {
+
         $this->findModel($id)->delete();
 
         return $this->redirect(['index']);

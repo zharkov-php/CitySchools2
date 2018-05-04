@@ -37,7 +37,7 @@ AppAsset::register($this);
     ]);
     if(Yii::$app->user->identity->nickname === Null){
 
-        $menuItems[] = ['label' => 'Login', 'url' => ['/site/login']];
+
 
     }else
         $menuItems = [

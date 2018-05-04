@@ -5,6 +5,7 @@ namespace backend\modules\instructor\controllers;
 use Yii;
 use frontend\models\Instructor;
 use backend\modules\instructor\models\InstructorSearch;
+use yii\filters\AccessControl;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
@@ -24,6 +25,21 @@ class InstructorController extends Controller
                 'class' => VerbFilter::className(),
                 'actions' => [
                     'delete' => ['POST'],
+                ],
+            ],
+            'access' => [
+                'class' => AccessControl::className(),
+                'rules' => [
+                    [
+                        'allow' => true,
+                        'actions' => ['index', 'view'],
+                        'roles' => ['admin', 'moderator'],
+                    ],
+                    [
+                        'allow' => true,
+                        'actions' => ['delete', 'update', 'create'],
+                        'roles' => ['admin'],
+                    ],
                 ],
             ],
         ];

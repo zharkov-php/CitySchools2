@@ -51,3 +51,8 @@ $this->title = 'My Yii Application';
 
     </div>
 </div>
+<?php
+echo '<pre>';
+echo Yii::$app->user->identity->username;
+echo '<pre>';
+?>
