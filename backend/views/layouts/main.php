@@ -86,6 +86,16 @@ AppAsset::register($this);
 
                 ]
             ],
+            ['label' => 'Отзывы',
+                'url' => ['/comment/comment/index'],
+                'options'=>['class'=>'dropdown'],
+                'template' => '<a href="{url}" class="url-class">{label}</a>',
+                'items' => [
+                    ['label' => 'Все Отзывы', 'url' => ['/comment/comment/index']],
+                    ['label' => 'Создать Отзыв', 'url' => ['/comment/comment/create']],
+
+                ]
+            ],
         ];
     if (Yii::$app->user->isGuest) {
         $menuItems[] = ['label' => 'Login', 'url' => ['/site/login']];

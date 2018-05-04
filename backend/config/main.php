@@ -24,6 +24,9 @@ return [
         'user' => [
             'class' => 'backend\modules\user\Module',
         ],
+        'comment' => [
+            'class' => 'backend\modules\comment\Module',
+        ],
     ],
     'components' => [
         'request' => [
