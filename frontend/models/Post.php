@@ -9,8 +9,7 @@ use Yii;
  *
  * @property int $id
  * @property int $user_id
- * @property string $filename
- * @property string $description
+ * @property string $text
  * @property int $created_at
  */
 class Post extends \yii\db\ActiveRecord
@@ -31,10 +30,9 @@ class Post extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['user_id', 'filename', 'description', 'created_at'], 'required'],
+            [['user_id', 'text', 'title'], 'required'],
             [['user_id', 'created_at'], 'integer'],
-            [['description'], 'string'],
-            [['filename'], 'string', 'max' => 255],
+            [['text', 'title'], 'string'],
         ];
     }
 
@@ -46,8 +44,8 @@ class Post extends \yii\db\ActiveRecord
         return [
             'id' => 'ID',
             'user_id' => 'User ID',
-            'filename' => 'Filename',
-            'description' => 'Description',
+            'text' => 'Text',
+            'title' => 'Title',
             'created_at' => 'Created At',
         ];
     }

@@ -10,6 +10,16 @@
 /* @var $post frontend\models\Post */
 use yii\helpers\Html;
 use yii\web\JqueryAsset;
+
+$this->title = $post->title_seo;
+\Yii::$app->view->registerMetaTag([
+    'name' => 'description',
+    'content' =>  $post->description_seo
+]);
+\Yii::$app->view->registerMetaTag([
+    'name' => 'keywords',
+    'content' =>  $post->keywords_seo
+]);
 ?>
 <div class="post-default-index">
     <div class="row">

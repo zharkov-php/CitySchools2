@@ -35,9 +35,47 @@ AppAsset::register($this);
             'class' => 'navbar-inverse navbar-fixed-top',
         ],
     ]);
-    $menuItems = [
-        ['label' => 'Home', 'url' => ['/site/index']],
-    ];
+    if(Yii::$app->user->identity->nickname === Null){
+
+
+
+    }else
+        $menuItems = [
+            ['label' => 'Админка', 'url' => ['/site/index']],
+
+            ['label' => 'Статьи',
+                'url' => ['/post/default/index'],
+                'options'=>['class'=>'dropdown'],
+                'template' => '<a href="{url}" class="url-class">{label}</a>',
+                'items' => [
+                    ['label' => 'Все статьи', 'url' => ['/post/post/index']],
+                    ['label' => 'Создать статью', 'url' => ['/post/post/create']],
+
+                ]
+            ],
+
+            ['label' => 'Автошколы',
+                'url' => ['/avtoshkoly/avtoshkoly/index'],
+                'options'=>['class'=>'dropdown'],
+                'template' => '<a href="{url}" class="url-class">{label}</a>',
+                'items' => [
+                    ['label' => 'Все Автошколы', 'url' => ['/avtoshkoly/avtoshkoly/index']],
+                    ['label' => 'Создать Автошколу', 'url' => ['/avtoshkoly/avtoshkoly/create']],
+
+                ]
+            ],
+
+            ['label' => 'Инструкторы',
+                'url' => ['/instructor/instructor/index'],
+                'options'=>['class'=>'dropdown'],
+                'template' => '<a href="{url}" class="url-class">{label}</a>',
+                'items' => [
+                    ['label' => 'Все Инструктора', 'url' => ['/instructor/instructor/index']],
+                    ['label' => 'Создать Инструктора', 'url' => ['/instructor/instructor/create']],
+
+                ]
+            ],
+        ];
     if (Yii::$app->user->isGuest) {
         $menuItems[] = ['label' => 'Login', 'url' => ['/site/login']];
     } else {
