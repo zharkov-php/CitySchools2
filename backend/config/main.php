@@ -21,6 +21,9 @@ return [
         'instructor' => [
             'class' => 'backend\modules\instructor\Module',
         ],
+        'user' => [
+            'class' => 'backend\modules\user\Module',
+        ],
     ],
     'components' => [
         'request' => [

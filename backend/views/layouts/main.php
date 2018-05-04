@@ -75,6 +75,17 @@ AppAsset::register($this);
 
                 ]
             ],
+
+            ['label' => 'Пользователи',
+                'url' => ['/user/user/index'],
+                'options'=>['class'=>'dropdown'],
+                'template' => '<a href="{url}" class="url-class">{label}</a>',
+                'items' => [
+                    ['label' => 'Все Пользователи', 'url' => ['/user/user/index']],
+                    ['label' => 'Создать Пользователя', 'url' => ['/user/user/create']],
+
+                ]
+            ],
         ];
     if (Yii::$app->user->isGuest) {
         $menuItems[] = ['label' => 'Login', 'url' => ['/site/login']];
