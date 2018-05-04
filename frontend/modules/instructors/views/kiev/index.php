@@ -1,6 +1,18 @@
 <?php use yii\helpers\Html;
 use yii\helpers\Url;
 use yii\widgets\LinkPager;
+
+$this->title = 'My Yii Application';
+
+
+\Yii::$app->view->registerMetaTag([
+    'name' => 'description',
+    'content' =>  ''
+]);
+\Yii::$app->view->registerMetaTag([
+    'name' => 'keywords',
+    'content' =>  ''
+]);
 ?>
     <div class="row">
         <div class="col-lg-6">

@@ -50,8 +50,8 @@ class Avtoshkoly extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['name','name_url', 'logo', 'card', 'text', 'adress', 'phone', 'mail', 'price_schools', 'sale', 'lesson_length', 'lessons_grafic', 'additional_lesson', 'autopark', 'category_widget', 'price_widget', 'link', 'site', 'title', 'price_plus', 'lessons_schedule'], 'required'],
-            [['text', 'adress', 'price_schools', 'autopark'], 'string'],
+            [['name'], 'required'],
+            [['text', 'adress', 'price_schools', 'autopark', 'title_seo', 'keywords_seo', 'description_seo'], 'string'],
             [['date_register'], 'safe'],
             [['date_birth'], 'integer'],
             [['name', 'logo', 'card', 'phone', 'mail', 'sale', 'lesson_length', 'lessons_grafic', 'additional_lesson', 'zone_widget', 'price_widget', 'link', 'site', 'title', 'price_plus', 'lessons_schedule'], 'string', 'max' => 255],
@@ -93,6 +93,9 @@ class Avtoshkoly extends \yii\db\ActiveRecord
             'title' => 'Title',
             'price_plus' => 'Price Plus',
             'lessons_schedule' => 'Lessons Schedule',
+            'title_seo' => 'Title_seo',
+            'keywords_seo' => 'Keywords_seo',
+            'description_seo' => 'Description_seo',
         ];
     }
 

@@ -7,7 +7,18 @@ use yii\widgets\DetailView;
 /* @var $this yii\web\View */
 /* @var $model frontend\models\Instructor */
 
-$this->title = $model->name;
+//$this->title = $model->name;
+
+
+$this->title = $instructor->title_seo;
+\Yii::$app->view->registerMetaTag([
+    'name' => 'description',
+    'content' =>  $instructor->description_seo
+]);
+\Yii::$app->view->registerMetaTag([
+    'name' => 'keywords',
+    'content' =>  $instructor->keywords_seo
+]);
 ?>
 <div class="container">
     <div class="row">
